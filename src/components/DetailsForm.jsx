@@ -7,7 +7,7 @@ import BasicTable from "./BasicTablse";
 const ariaLabel = { "aria-label": "description" };
 
 export default function DetailsForm() {
-  var getCostsAPIUrl = "http://localhost:3030/api/report/";
+  var getCostsAPIUrl = "http://localhost:8000/api/report/";
   const [user_id, setuser_id] = useState("");
   const [month, setMonth] = useState("");
   const [year, setYear] = useState("");
@@ -15,7 +15,7 @@ export default function DetailsForm() {
 
   const getDetails = async () => {
     if (user_id && year && month) {
-      getCostsAPIUrl = `http://localhost:3030/api/report/${month}/${year}/${user_id}`;
+      getCostsAPIUrl = `http://localhost:8000/api/report/${month}/${year}/${user_id}`;
       try {
         const actualData = await fetch(getCostsAPIUrl).then((response) =>
           response.json()
