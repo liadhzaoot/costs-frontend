@@ -6,7 +6,7 @@ import Button from "@mui/material/Button";
 const ariaLabel = { "aria-label": "description" };
 
 export default function CostForm() {
-  const addCostAPIUrl = "http://localhost:3030/api/costs";
+  const addCostAPIUrl = "http://localhost:3000/api/costs";
   const [user_id, setuser_id] = useState("");
   const [description, setDescription] = useState("");
   const [category, setCategory] = useState("");
