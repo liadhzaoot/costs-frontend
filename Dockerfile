@@ -13,5 +13,7 @@ RUN npm install -g npm@8.12.1
 # copy other project files
 COPY . .
 
+RUN RUN npm i react-scripts
+
 # build the folder
 CMD [ "npm", "run", "start" ]
